@@ -37,7 +37,7 @@ int main(int argc, char const *argv[]){
     Listen(listen_fd,1024);
 
     for(;;){
-        printf("In attesa di nuove richieste di vaccinazione");
+        printf("In attesa di nuove richieste di vaccinazione ...");
         connect_fd = Accept(listen_fd,(struct sockaddr*)NULL,NULL);
 
         //creo figli che permettono la gestione delle varie richieste degli utenti
