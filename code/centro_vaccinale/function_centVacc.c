@@ -182,7 +182,7 @@ void answer_user(int connect_fd){
     message_welcome_size = sizeof(buffer);
 
     //inviamo i byte di scrittura del buffer
-    if(Full_write(connect_fd,&message_welcome_size,sizeof(int))<0){
+    if(Full_write(connect_fd,&message_welcome_size,sizeof(int)) < 0){
         perror("full_write() error\n");
         exit(1);
     }
